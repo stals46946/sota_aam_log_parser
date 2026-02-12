@@ -1,0 +1,61 @@
+2026-02-11 14:33:39,652 amdocs.cpv9.soap.SimOtaSoapClient - SOAP Message Sent:
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Header>
+  <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+   <wsse:UsernameToken wsu:Id="UsernameToken-8">
+    <wsse:Username>topsoapuser@USCC</wsse:Username>
+    <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Yg+66Cs=996EXCq97O*a971eo</wsse:Password>
+   </wsse:UsernameToken>
+  </wsse:Security>
+ </soapenv:Header>
+ <soapenv:Body>
+  <assignMsisdn xmlns="http://api.rum.gemalto.com/">
+   <iccid xmlns="">89015809000261657279</iccid>
+   <newMsisdn xmlns="">2522139902</newMsisdn>
+   <otaServiceGroupList xmlns="">
+    <ns1:rfmOtaUSIMServiceGroup xmlns:ns1="http://api.rum.gemalto.com/">
+     <otaTemplateList>
+      <otaTemplate>PLMNUICC-OPLMN-38</otaTemplate>
+      <otaTemplate>PLMNUICC-FPLMN-38</otaTemplate>
+      <otaTemplate>UICC-PNNPNN-38</otaTemplate>
+      <otaTemplate>UICC-OPLOPL-38</otaTemplate>
+      <otaTemplate>UICC-MSPL-1</otaTemplate>
+      <otaTemplate>UICC-MLPL-1</otaTemplate>
+     </otaTemplateList>
+     <ns1:USIM_UpdateMSISDN>
+      <record>
+       <ton>10</ton>
+       <npi>1</npi>
+       <dialingNumber>12522139902</dialingNumber>
+      </record>
+     </ns1:USIM_UpdateMSISDN>
+     <ns1:USIM_UpdateACC>
+      <accList>0000000000000100</accList>
+     </ns1:USIM_UpdateACC>
+    </ns1:rfmOtaUSIMServiceGroup>
+    <ns2:ramOtaServiceGroup xmlns:ns2="http://api.rum.gemalto.com/">
+     <otaTemplateList>
+      <otaTemplate>Update_SMSP5G</otaTemplate>
+     </otaTemplateList>
+    </ns2:ramOtaServiceGroup>
+    <ns3:rfmOtaISIMServiceGroup xmlns:ns3="http://api.rum.gemalto.com/">
+     <otaTemplateList>
+      <otaTemplate>IMSDomain1</otaTemplate>
+      <otaTemplate>PCSCFAddress1</otaTemplate>
+     </otaTemplateList>
+     <ns3:ISIM_UpdateIMPU>
+      <sipUri>sip:311580400136354@ims.mnc580.mcc311.3gppnetwork.org</sipUri>
+      <sipUri>sip:+12522139902@usccims.com</sipUri>
+      <sipUri>tel:+12522139902</sipUri>
+     </ns3:ISIM_UpdateIMPU>
+     <ns3:ISIM_UpdateIMPI>
+      <nai>311580400136354@ims.mnc580.mcc311.3gppnetwork.org</nai>
+     </ns3:ISIM_UpdateIMPI>
+    </ns3:rfmOtaISIMServiceGroup>
+   </otaServiceGroupList>
+   <externalId xmlns="">AAM</externalId>
+   <assignOnly xmlns="">false</assignOnly>
+  </assignMsisdn>
+ </soapenv:Body>
+</soapenv:Envelope>
+2026-02-11 14:33:40,053 amdocs.cpv9.soap.SimOtaSoapClient - SOAP Message Received:
